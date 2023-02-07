@@ -1,7 +1,12 @@
 import Head from "next/head";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import Header from "../components/Header";
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const [showCart, setShowCart] = useState(false);
+
   return (
     <div className="bg-gray-100">
       <Head>
@@ -9,9 +14,9 @@ export default function Home() {
       </Head>
 
       <Header
-      // products={products}
-      // setShowCart={setShowCart}
-      // showCart={showCart}
+        // products={products}
+        setShowCart={setShowCart}
+        showCart={showCart}
       />
 
       {/* <main className="mx-auto" style={{ maxWidth: "1920px" }}> */}

@@ -5,7 +5,7 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import Currency from "react-currency-formatter";
-// import SideCart from "./SideCart";
+import SideCart from "./SideCart";
 import Link from "next/link";
 import { useState } from "react";
 import { signIn, signOut, useSession } from "next-auth/client";
@@ -156,7 +156,7 @@ function Header({ setShowCart, showCart, products }) {
           <p className="link hidden lg:inline-flex">Mens & Womens</p>
         </div>
       </div>
-      {/* {showCart && <SideCart setShowCart={setShowCart} />} */}
+      {showCart && <SideCart setShowCart={setShowCart} />}
     </>
   );
 }
