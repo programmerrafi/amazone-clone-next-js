@@ -42,7 +42,7 @@ function Header({ setShowCart, showCart, products }) {
             <Image
               src="https://links.papareact.com/f90"
               width={105}
-              height={40}
+              height={38}
               object-fit="cover"
               alt="logo"
               className="cursor-pointer"

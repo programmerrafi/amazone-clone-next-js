@@ -10,6 +10,7 @@ const nextConfig = {
       "fakestoreapi.com",
       "dl.airtable.com",
       "v5.airtableusercontent.com",
+      "images2.imgbox.com",
     ],
   },
 };

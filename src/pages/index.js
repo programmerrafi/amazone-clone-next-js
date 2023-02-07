@@ -1,11 +1,19 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Header from "../components/Header";
+import Banner from "../components/Banner";
+import ProductFeed from "../components/ProductFeed";
+import Footer from "../components/Footer";
+import { addProducts } from "../slices/basketSlice";
 
-export default function Home() {
+export default function Home({ products }) {
   const dispatch = useDispatch();
   const [showCart, setShowCart] = useState(false);
+
+  useEffect(() => {
+    dispatch(addProducts(products));
+  }, [products]);
 
   return (
     <div className="bg-gray-100">
@@ -22,12 +30,12 @@ export default function Home() {
       {/* <main className="mx-auto" style={{ maxWidth: "1920px" }}> */}
       <main className="mx-auto max-w-screen-2xl">
         {/* Banner */}
-        {/* <Banner /> */}
+        <Banner />
         {/* Product feed */}
-        {/* <ProductFeed products={products} setShowCart={setShowCart} /> */}
+        <ProductFeed products={products} setShowCart={setShowCart} />
       </main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
