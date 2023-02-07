@@ -63,7 +63,7 @@ function Product({
       <>
         <div
           className={
-            "relative flex flex-col m-5 z-40 bg-white p-8 rounded-xl transition duration-300" +
+            "relative flex flex-col m-5 z-40 bg-white p-8 rounded-xl transition duration-300 " +
             styles.loop_product
           }
         >
@@ -73,17 +73,18 @@ function Product({
           <div
             className={`relative rounded-lg mt-1 overflow-hidden ${styles.product_image_wrapper}`}
           >
-            <Image
-              className={
-                "cursor-pointer rounded-lg  w-full " + styles.loop_product_image
-              }
-              loading="lazy"
-              src={image}
-              width={800}
-              height={500}
-              object-fit="cover"
-              alt="product"
-            />
+            <div className=" !w-full !h-[180px] relative !overflow-hidden">
+              <Image
+                className={
+                  "cursor-pointer rounded-lg " + styles.loop_product_image
+                }
+                loading="lazy"
+                src={image}
+                width={800}
+                height={500}
+                alt="product"
+              />
+            </div>
             <div
               onClick={() => setShowQuick(true)}
               className={`rounded-lg cursor-pointer ${styles.product_image_overly}`}

@@ -5,6 +5,8 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .Product_product_image_wrapper {
   display: flex;
@@ -39,7 +41,7 @@
 }
 .product_image_overly {
   width: 100%;
-  height: 97%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.281);
   /* background: red; */
   position: absolute;
