@@ -37,13 +37,14 @@ function Header({ setShowCart, showCart, products }) {
         className="header"
         style={{ position: "sticky", top: 0, zIndex: 50 }}
       >
-        <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
+        <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2 px-6 space-x-6">
           <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
             <Image
               src="https://links.papareact.com/f90"
-              width={150}
+              width={105}
               height={40}
-              objectFit="contain"
+              object-fit="cover"
+              alt="logo"
               className="cursor-pointer"
               onClick={() => router.push("/")}
             />
@@ -109,7 +110,7 @@ function Header({ setShowCart, showCart, products }) {
           </div>
 
           {/* Right */}
-          <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
+          <div className="text-white flex items-center text-xs space-x-6 whitespace-nowrap">
             <div onClick={!session ? signIn : signOut} className="link">
               <p>{session ? `Hello, ${session?.user?.name}` : "Sign In"}</p>
               <p className="font-extrabold md:text-sm">Account & Links</p>
