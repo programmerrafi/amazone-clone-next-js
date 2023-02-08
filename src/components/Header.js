@@ -12,6 +12,7 @@ import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 import { selectTotalItems } from "../slices/basketSlice";
 import { useSelector } from "react-redux";
+import Logo from "../assets/logo.png";
 
 function Header({ setShowCart, showCart, products }) {
   const [session] = useSession();
@@ -40,7 +41,7 @@ function Header({ setShowCart, showCart, products }) {
         <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2 px-6 space-x-6">
           <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
             <Image
-              src="https://links.papareact.com/f90"
+              src={Logo}
               width={105}
               height={38}
               object-fit="cover"
