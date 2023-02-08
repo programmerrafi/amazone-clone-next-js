@@ -54,8 +54,7 @@ function CheckoutProduct({
         </div>
         <p className="text-xs my-2 line-clamp-3">{description}</p>
         <div className="text-gray-400">
-          <Currency quantity={price} /> {" * "} {quantity} {" = "}
-          <Currency quantity={price * quantity} />
+          ${price} {" * "} {quantity} {" = "}${price * quantity}
         </div>
         {shipping && (
           <div className="flex items-center space-x-2">

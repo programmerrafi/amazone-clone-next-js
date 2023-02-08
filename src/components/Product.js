@@ -22,7 +22,6 @@ function Product({
   company,
   setShowCart,
   products,
-  isProduct5,
 }) {
   const dispatch = useDispatch();
 
