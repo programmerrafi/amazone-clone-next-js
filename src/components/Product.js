@@ -73,7 +73,7 @@ function Product({
           <div
             className={`relative rounded-lg mt-1 overflow-hidden ${styles.product_image_wrapper}`}
           >
-            <div className=" !w-full !h-[180px] relative !overflow-hidden">
+            <div className=" !w-full xl:!h-[180px] md:!h-[260px] !h-[180px] relative !overflow-hidden">
               <Image
                 className={
                   "cursor-pointer rounded-lg " + styles.loop_product_image

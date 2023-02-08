@@ -23,7 +23,7 @@ function ProductFeed({ products = [], setShowCart }) {
         className="px-5 md:col-span-4 mx-auto rounded-lg"
       />
 
-      <div className="md:col-span-2">
+      <div className="lg:col-span-2">
         {products &&
           products
             .slice(4, 5)
