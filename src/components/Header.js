@@ -4,7 +4,6 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
-import Currency from "react-currency-formatter";
 import SideCart from "./SideCart";
 import Link from "next/link";
 import { useState } from "react";
@@ -91,8 +90,7 @@ function Header({ setShowCart, showCart, products }) {
                       </Link>
                       <Link href={`/product/${id}`}>
                         <p className="text-xs text-gray-400">
-                          {category}
-                          <Currency quantity={price} />
+                          {category}${price}
                         </p>
                       </Link>
                     </div>
