@@ -6,7 +6,6 @@ import {
   removeFromBasket,
   selectTotalItems,
 } from "../slices/basketSlice";
-import Currency from "react-currency-formatter";
 import { useRouter } from "next/router";
 
 function SideCart({ setShowCart }) {
@@ -41,9 +40,7 @@ function SideCart({ setShowCart }) {
                       {item.title}
                     </span>
                   </div>
-                  <div className="text-gray-400">
-                    <Currency quantity={item.price} />
-                  </div>
+                  <div className="text-gray-400">${item.price}</div>
                 </div>
                 <XIcon
                   onClick={() => removeItemFromBasket(item.id)}
@@ -62,7 +59,7 @@ function SideCart({ setShowCart }) {
             className="w-full button"
             onClick={() => router.push("/checkout")}
           >
-            Checkout <Currency quantity={totalPrice} />
+            Checkout ${totalPrice}
           </button>
         </div>
       </div>

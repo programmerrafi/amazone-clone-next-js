@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
-// import Currency from "react-currency-formatter";
 import styles from "../styles/Product.module.css";
 import Link from "next/link";
 // import Fade from "react-reveal/Fade";

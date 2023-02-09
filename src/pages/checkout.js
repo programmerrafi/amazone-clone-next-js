@@ -7,7 +7,6 @@ import {
   selectTotal,
   selectTotalItems,
 } from "../slices/basketSlice";
-import Currency from "react-currency-formatter";
 import { useSession } from "next-auth/client";
 import { loadStripe } from "@stripe/stripe-js";
 import axios from "axios";
@@ -98,9 +97,7 @@ function Checkout({ products }) {
               <>
                 <h2 className="whitespace-nowrap">
                   Subtotal ({selectTotalItem} items):{" "}
-                  <span className="font-bold text-gray-500">
-                    <Currency quantity={totalPrice} />
-                  </span>
+                  <span className="font-bold text-gray-500">${totalPrice}</span>
                 </h2>
                 {/* createCheckoutSession button function */}
                 <button

@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { addToBasket } from "../slices/basketSlice";
 import styles from "../styles/Product.module.css";
 import { StarIcon } from "@heroicons/react/solid";
-import Currency from "react-currency-formatter";
 import QuantityCount from "./QuantityCount";
 import { useRouter } from "next/router";
 
@@ -101,9 +100,7 @@ function QuickView({ setShowQuick, id, products }) {
                     />
                   ))}
               </div>
-              <p className="text-yellow-500 text-2xl mb-7">
-                <Currency quantity={product?.price} />
-              </p>
+              <p className="text-yellow-500 text-2xl mb-7">${product?.price}</p>
               {product?.shipping && (
                 <div className="flex items-center space-x-2">
                   <img
