@@ -103,7 +103,6 @@ function Checkout({ products }) {
                 <button
                   onClick={() => null}
                   // onClick={createCheckoutSession}
-                  // onClick={createCheckoutSession}
                   role="link"
                   disabled={!session}
                   className={`button mt-2 ${

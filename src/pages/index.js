@@ -22,7 +22,7 @@ export default function Home({ products }) {
       </Head>
 
       <Header
-        // products={products}
+        products={products}
         setShowCart={setShowCart}
         showCart={showCart}
       />

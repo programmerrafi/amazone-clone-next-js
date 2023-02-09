@@ -31,6 +31,14 @@ Run commands
 Open or create a `.env` file then edit add this setting
 
 ```
+# Firebase
+FIREBASE_API_KEY=key_goes_here
+FIREBASE_AUTH_DOMAIN=key_goes_here
+FIREBASE_PROJECT_ID=key_goes_here
+FIREBASE_STORAGE_BUCKET=key_goes_here
+FIREBASE_MESSAGING_SENDER_ID=key_goes_here
+FIREBASE_APP_ID=key_goes_here
+
 # Authentication
 GOOGLE_ID=key_goes_here
 GOOGLE_SECRET=key_goes_here
