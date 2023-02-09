@@ -1,6 +1,6 @@
 # Amazon Clone
 
-![Template Screenshot](TemplateScreenshot.jpg?raw=true "Template Screenshot")
+![Template Screenshot](TemplateScreenshot.png?raw=true "Template Screenshot")
 
 ## Live demo
 
