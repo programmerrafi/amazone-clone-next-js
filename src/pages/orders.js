@@ -5,9 +5,7 @@ import Order from "../components/Order";
 import Head from "next/head";
 
 function orders({ orders }) {
-  console.log("orders: ", orders);
   const [session] = useSession();
-  console.log("session: --", session);
 
   return (
     <>

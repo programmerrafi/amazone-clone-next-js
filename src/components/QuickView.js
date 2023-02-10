@@ -22,7 +22,7 @@ function QuickView({ setShowQuick, id, products }) {
   useEffect(() => {
     const found = products.filter((product) => product.id == id)[0];
     setProduct(found);
-    console.log(found);
+    // console.log(found);
   }, [id]);
   //{ name, price, images, description, colors, company, stock, reviews, category, shipping }
 
