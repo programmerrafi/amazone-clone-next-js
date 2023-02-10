@@ -22,23 +22,30 @@ function Checkout({ products }) {
   const selectTotalItem = useSelector(selectTotalItems);
   const [categorys, setCategorys] = useState([]);
 
-  // const createCheckoutSession = async () => {
-  //   const stripe = await stripePromise;
+  // console.log(items);
 
-  //   // Call the backend to create a session
-  //   const checkoutSession = await axios.post("/api/create-checkout-session", {
-  //     items,
-  //     email: session.user.email,
-  //   });
+  const createCheckoutSession = async () => {
+    if (Number(totalPrice) > 999999) {
+      alert(
+        "Your Checkout Products total amount due must be no more than $999,999"
+      );
+      return;
+    }
+    const stripe = await stripePromise;
 
-  //   // Redirect
+    // Call the backend to create a session
+    const checkoutSession = await axios.post("/api/create-checkout-session", {
+      items,
+      email: session.user.email,
+    });
 
-  //   const result = await stripe.redirectToCheckout({
-  //     sessionId: checkoutSession.data.id,
-  //   });
+    // Redirect user/customer to Stripe Checkout
+    const result = await stripe.redirectToCheckout({
+      sessionId: checkoutSession?.data?.id,
+    });
 
-  //   if (result.error) alert(result.error.message);
-  // };
+    if (result.error) alert(result.error.message);
+  };
 
   useEffect(() => {
     const allCategories = items.map((item) => item.category);
@@ -101,8 +108,7 @@ function Checkout({ products }) {
                 </h2>
                 {/* createCheckoutSession button function */}
                 <button
-                  onClick={() => null}
-                  // onClick={createCheckoutSession}
+                  onClick={createCheckoutSession}
                   role="link"
                   disabled={!session}
                   className={`button mt-2 ${
@@ -112,6 +118,12 @@ function Checkout({ products }) {
                 >
                   {!session ? "Sign in to checkout" : "Proceed to checkout"}
                 </button>
+                {Number(totalPrice) > 999999 && (
+                  <h3 className="text-xs text-red-500 pt-3">
+                    Note: Your Checkout Products total amount due must be no
+                    more than $999,999
+                  </h3>
+                )}
               </>
             )}
           </div>

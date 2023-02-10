@@ -6,6 +6,7 @@ import Banner from "../components/Banner";
 import ProductFeed from "../components/ProductFeed";
 import Footer from "../components/Footer";
 import { addProducts } from "../slices/basketSlice";
+import { getSession } from "next-auth/client";
 
 export default function Home({ products }) {
   const dispatch = useDispatch();
@@ -41,7 +42,7 @@ export default function Home({ products }) {
 }
 
 export async function getServerSideProps(context) {
-  // const session = await getSession(context);
+  const session = await getSession(context);
 
   const products = await fetch(
     "https://course-api.com/react-store-products"
@@ -50,7 +51,7 @@ export async function getServerSideProps(context) {
   return {
     props: {
       products,
-      // session,
+      session,
     },
   };
 }

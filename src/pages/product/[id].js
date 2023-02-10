@@ -51,7 +51,8 @@ function Details({ product, products }) {
   return (
     <>
       <Head>
-        <title>{name} | Amazon</title>
+        {/* <title>{name} | Amazon</title> */}
+        <title>Product | Amazon</title>
       </Head>
       <Header
         products={products}
