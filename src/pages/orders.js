@@ -60,7 +60,7 @@ export async function getServerSideProps(context) {
     stripeOrders.docs.map(async (order) => ({
       id: order.id,
       amount: order.data().amount,
-      amountShipping: order.data().amount_shipping,
+      // amountShipping: order.data().amount_shipping,
       images: order.data().images,
       timestamp: moment(order.data().timestamp.toDate()).unix(),
       titles: order.data().title,
