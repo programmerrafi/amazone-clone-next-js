@@ -4,7 +4,7 @@
 
 ## Live demo
 
-### [Live Demo](https://amazone-clone-next-js.vercel.app)
+### [Live Demo](https://amazon-clone-nextjs-4.netlify.app)
 
 ## Installation Steps
 
